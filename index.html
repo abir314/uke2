@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+
+        }
+        img {
+            border: solid 2px rgb(173, 174, 230);
+            height: 300px;
+            width: 200px;
+            background-color: transparent;
+            margin: 50px;
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="img1" class="image" style="flex-grow: 0;" onclick="getImage(this)" ></img>
+        <img id="img2" class="image" style="flex-grow: 0;" onclick="getImage(this)" ></img>
+        <img id="img3" class="image" style="flex-grow: 0;" onclick="getImage(this)" /></img> 
+    </div>
+        <br />
+        <div id="imgName"></div>
+
+        <script>
+            function getImage(a) {
+                var b = a.id;
+                console.log(b);
+                if (b == "img1") {
+                  a.src = "img/banan.gif";
+                    navn("banan.gif");
+                }
+
+               
+                else if (b == "img2") {
+                    a.src = "img/eple.gif";
+                    navn("eple.gif");
+                }
+                else if (b == "img3") {
+                    a.src = "img/pære.gif";
+                    navn("pære.gif");
+                }
+            }
+         
+            function navn(c){
+                document.getElementById("imgName").innerHTML = `<p>Navn av bildet er ${c}.`;
+            }
+
+        </script>
+    
+</body>
+</html>
